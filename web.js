@@ -10,7 +10,8 @@ fs.readFile('index.html', function(err, data) {
   if (err) throw err;
   var buffer = new Buffer(data);	
   input = buffer.toString();
-  //console.log(input);
+
+  console.log(input);
 });
 
 app.get('/', function(request, response) {
