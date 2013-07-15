@@ -21,5 +21,5 @@ app.get('/', function(request, response) {
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
-  console.log("Listening on <a>ec2-54-218-64-156.us-west-2.compute.amazonaws.com:8080</a>");  
+  console.log("Listening on ec2-54-218-64-156.us-west-2.compute.amazonaws.com:" + port);  
 });
