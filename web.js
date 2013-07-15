@@ -11,7 +11,6 @@ fs.readFile('index.html', function(err, data) {
   var buffer = new Buffer(data);	
   input = buffer.toString();
 
-  console.log(input);
 });
 
 app.get('/', function(request, response) {
@@ -19,7 +18,8 @@ app.get('/', function(request, response) {
   //response.send('Hello World 2!');
 });
 
-var port = process.env.PORT || 5000;
+var port = process.env.PORT || 8080;
 app.listen(port, function() {
   console.log("Listening on " + port);
+  console.log("Listening on <a>ec2-54-218-64-156.us-west-2.compute.amazonaws.com:8080</a>");  
 });
