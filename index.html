@@ -158,7 +158,7 @@
         </div>
       </div>
       <div class="row-fluid pitch">
-        <div class="span5 offset1 video">
+        <div id="quote" class="span5 offset1 video">
           <!--<img class="img-polaroid" src="http://placehold.it/>-->
 
 
@@ -316,6 +316,43 @@
 
 
 
+
+<script type="text/javascript">
+
+//770
+var quote = $('#quote');
+var my_window = $(window);
+var append = false;
+
+
+function my_resize2() {
+
+var width = my_window.width();
+var margin = (1280*96)/width;
+
+if ($(window).width() > 770) {
+quote.css('margin-bottom', '0px');
+}
+
+else if ($(window).width() <= 770) {
+
+			      quote.css('margin-bottom', margin+'px');
+
+			      }
+
+			      }
+
+
+			      $(window).resize(function() {
+
+			      my_resize2();
+
+			      });
+
+			      my_resize2();
+
+
+</script>
 
 </body>
 </html> 
