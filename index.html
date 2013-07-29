@@ -172,7 +172,7 @@
         </div>
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
-        <div class="span5 actions">
+        <div id="money" class="span5 actions">
           <div class="span8 offset2">
             <div class="statistics">
               <div class="span4">
@@ -223,10 +223,13 @@
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-<iframe src="https://docs.google.com/presentation/d/1_v7-dhlyhaFBBOUeMX92leaZekQlow6U854RWtfIzTs/embed?start=false&loop=false&delayms=3000" frameborder="0" width="361" height="300" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 
-          <!-- <img class="img-polaroid" src="http://placehold.it/480x300"> -->
+        <iframe src="http://slid.es/zsimo/brave-talents/embed" width="480"
+                height="300" scrolling="no" frameborder="0"
+                webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
         </div>
         <div class="span5 copy">
           <p>
@@ -297,7 +300,7 @@
                   <div class="accordion-inner">
                     A question which is commonly asked by users.
                   </div>
-                </div>
+                </div>nn
               </div>
             </div>
           </div>
@@ -325,35 +328,34 @@
 
 //770
 var quote = $('#quote');
+var slide = $('iframe');
+var money = $('#money');
 var my_window = $(window);
 var append = false;
 
 
 function my_resize2() {
 
-var width = my_window.width();
-var margin = (1280*96)/width;
+  var width = my_window.width();
+  var margin = (1280*96)/width;
 
-if ($(window).width() > 770) {
-quote.css('margin-bottom', '0px');
+  if ($(window).width() > 770) {
+    quote.css('margin-bottom', '0px');
+  }
+
+  else if ($(window).width() <= 770) {
+    quote.css('margin-bottom', margin+'px');
+ }
+
+  slide.css('width', slide.css('width', money.css('width')));
+
 }
 
-else if ($(window).width() <= 770) {
+$(window).resize(function() {
+  my_resize2();
+});
 
-			      quote.css('margin-bottom', margin+'px');
-
-			      }
-
-			      }
-
-
-			      $(window).resize(function() {
-
-			      my_resize2();
-
-			      });
-
-			      my_resize2();
+my_resize2();
 
 
 </script>
